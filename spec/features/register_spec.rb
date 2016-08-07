@@ -1,4 +1,4 @@
-require 'spec_helper.rb'
+require 'spec_helper'
 
 # As a marketeer
 # So that I can see my name in lights

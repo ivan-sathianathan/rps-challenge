@@ -1,8 +1,9 @@
-<%= @name %> - choose Rock, Paper, or Scissors
+Hello, <%= @name %>!
 
-
-<form action="/choice" method="post">
-  <input type="submit" value="Rock" name="choice">
-  <input type="submit" value="Paper" name="choice">
-  <input type="submit" value="Scissors" name="choice">
+<form action="/play" method="post">
+  <input type="submit" value="Rock" name="shape">
+  <input type="submit" value="Paper" name="shape">
+  <input type="submit" value="Scissors" name="shape">
 </form>
+
+You chose <%= @shape %>
