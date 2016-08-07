@@ -24,17 +24,6 @@ class RPS < Sinatra::Base
     redirect '/play'
   end
 
-  #
-  # get '/game' do
-  #   @player = $player
-  #   @item = $item
-  #   @game = Game.new(@player, @item)
-  #   @computer = Computer.new
-  #   @computer_item = @computer.computer_item
-  #   @outcomes = @game.winner(@item,@computer_item)
-  #   erb(:game)
-  # end
-
   # start the server if ruby file executed directly
   run! if app_file == $0
 end
