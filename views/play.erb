@@ -1,4 +1,4 @@
-Hello, <%= @name %>!
+Hello, <%= @turn.player_name %>!
 
 <form action="/play" method="post">
   <input type="submit" value="Rock" name="shape">
@@ -6,4 +6,8 @@ Hello, <%= @name %>!
   <input type="submit" value="Scissors" name="shape">
 </form>
 
-You chose <%= @shape %>
+You chose <%= @turn.player_shape.to_s.capitalize %>
+
+<div id="opponent">
+  Opponent chose <%= @turn.opponent_shape.to_s.capitalize %>
+</div>
