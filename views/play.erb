@@ -6,8 +6,9 @@ Hello, <%= @turn.player_name %>!
   <input type="submit" value="Scissors" name="shape">
 </form>
 
-You chose <%= @turn.player_shape.to_s.capitalize %>
-Opponent chose <%= @turn.opponent_shape.to_s.capitalize %>
+<div>You chose <%= @turn.player_shape.to_s.capitalize %></div>
+
+<div>Opponent chose <%= @turn.opponent_shape.to_s.capitalize %></div>
 
 <% if @turn.win? %>
   You win!
