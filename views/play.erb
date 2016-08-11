@@ -7,10 +7,7 @@ Hello, <%= @turn.player_name %>!
 </form>
 
 You chose <%= @turn.player_shape.to_s.capitalize %>
-
-<div id="opponent">
-  Opponent chose <%= @turn.opponent_shape.to_s.capitalize %>
-</div>
+Opponent chose <%= @turn.opponent_shape.to_s.capitalize %>
 
 <% if @turn.win? %>
   You win!

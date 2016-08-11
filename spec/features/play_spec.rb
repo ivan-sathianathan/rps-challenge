@@ -21,19 +21,10 @@ end
 
   # As a player
   # So I can play a game
-  # I want to see choose a shape
+  # I want to choose a shape
   scenario 'choose a shape' do
     click_button 'Rock'
     expect(page).to have_content 'You chose Rock'
-  end
-
-  # As a player
-  # So I can play a game
-  # I want the game to choose an option
-  scenario 'game chooses "Rock"' do
-    click_button 'Rock'
-    message = find(:css, "#opponent").text
-    expect(possible_messages).to include message
   end
 
   # As a player
@@ -67,9 +58,5 @@ end
       click_button 'Scissors'
       expect(page).to have_content 'You draw!'
     end
-  end
-
-  def possible_messages
-    [:rock, :paper, :scissors].map { |shape| "Opponent chose #{shape.to_s.capitalize}" }
   end
 end

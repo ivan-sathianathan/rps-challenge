@@ -16,7 +16,7 @@ describe Turn do
     end
   end
 
-  describe '#player_name' do
+  describe '#opponent_name' do
     it 'returns opponent shape' do
       expect(turn.opponent_shape).to eq :scissors
     end

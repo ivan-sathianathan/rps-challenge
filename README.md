@@ -1,21 +1,8 @@
-# RPS Challenge: Rōnin Badge Test
+# RPS Challenge
 
-Instructions
--------
-* Challenge time: Friday, the entire day + the weekend if you need it
-* Feel free to use google, your notes, books, etc but work on your own
-* You must submit a pull request to this repo with your code by 9am Monday morning
+This is my solution to the third weekend challenge we were set at Makers Academy. We had to fulfil the following user stories:
 
-Task 
-----
-
-Knowing how to build web applications is getting us almost there as web developers!
-
-The Makers Academy Marketing Array ( **MAMA** ) have asked us to provide a game for them. Their daily grind is pretty tough and they need time to steam a little.
-
-Your task is to provide a _Rock, Paper, Scissors_ game for them so they can play on the web with the following user stories:
-
-```sh
+```
 As a marketeer
 So that I can see my name in lights
 I would like to register my name before playing an online game
@@ -25,42 +12,60 @@ So that I can enjoy myself away from the daily grind
 I would like to be able to play rock/paper/scissors
 ```
 
-Hints on functionality
+We were also given the following hints on functionality:
 
+```
 - the marketeer should be able to enter their name before the game
 - the marketeer will be presented the choices (rock, paper and scissors)
 - the marketeer can choose one option
 - the game will choose a random option
 - a winner will be declared
+```
+
+#Usage
+
+1. Clone this repo
+2. Run ```bundle```
+3. Run ```rackup```
+4. Point your browser to http://localhost:9292
+5. Play!
 
 
-As usual please start by
+More documentation on the behaviour of each class and their methods as well as feature tests can be found by running rspec
 
-* Filling out your learning plan self review for the week: https://github.com/makersacademy/learning_plan_september2015 (if you haven't already)
-* Forking this repo
-* TEST driving development of your app
+```
+playing a game
+  see the shape options
+  choose a shape
+  game chooses a random option
+  end game
+    I win
+    I lose
+    I draw
 
-**Rōnin BANZAI!!!!**
+registering name
+  register and see my name
 
-## Bonus level 1: Multiplayer
+Opponent
+  #shape
+    returns a random shape
 
-Change the game so that two marketeers can play against each other ( _yes there are two of them_ ).
+Turn
+  #player_name
+    returns player name
+  #player_shape
+    returns player shape
+  #opponent_name
+    returns opponent shape
+  end game
+    #win?
+      returns true if player_shape is :rock and opponent_shape is :scissors
+    #lose?
+      returns true if player_shape is :rock and opponent_shape is :paper
+    #draw?
+      returns true if player_shape is :rock and opponent_shape is :rock
+```
 
-## Bonus level 2: Rock, Paper, Scissors, Spock, Lizard
-
-Use the _special_ rules ( _you can find them here http://en.wikipedia.org/wiki/Rock-paper-scissors-lizard-Spock_ )
-
-## Basic Rules
-
-- Rock beats Scissors
-- Scissors beats Paper
-- Paper beats Rock
-
-Notes on test coverage
-----------------------
-
-Please ensure you have the following **AT THE TOP** of your spec_helper.rb in order to have test coverage stats generated
-on your pull request:
 
 ```ruby
 require 'coveralls'
@@ -70,9 +75,8 @@ SimpleCov.formatters = [
   SimpleCov::Formatter::HTMLFormatter,
   Coveralls::SimpleCov::Formatter
 ]
-Coveralls.wear! 
+Coveralls.wear!
 ```
 
 Note that you can replace `Coveralls.wear!` with  `SimpleCov.start` to get coverage stats locally
 Then run `open coverage/index.html` from the command line to view details
-
